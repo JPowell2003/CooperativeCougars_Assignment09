@@ -19,7 +19,7 @@ class Product:
         Get product data and select a random product
         @return: A dictionary containing the selected product's details
         '''
-        db_manager = DatabaseManagement1()
+        db_manager = dbconnector()
         cursor = db_manager.submit_sql_to_server(self.conn)
 
         if cursor:  # Ensures that the database query actually returns a valid cursor
@@ -35,3 +35,5 @@ class Product:
                     "BrandID": random_product[4]
                 }
         return None  # Returns None if no data is available
+
+
