@@ -15,8 +15,6 @@ class dbconnector:
                                 'uid=IS4010Login;'
                                 'pwd=P@ssword2;')
         except:   
-            #what do we do if we end up here?
-            # print("Unable to connect to database") # Probably not wise
             return None
         return conn
 
