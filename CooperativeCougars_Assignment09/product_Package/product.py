@@ -19,8 +19,9 @@ class Product:
         Get product data and select a random product
         @return: A dictionary containing the selected product's details
         '''
-        db_manager = DatabaseManagement1()
-        cursor = db_manager.submit_sql_to_server(self.conn)
+        db_manager = dbconnector()
+        query = "SELECT ProductID, [UPC-A ], Description, ManufacturerID, BrandID FROM tProduct"
+        cursor = db_manager.submit_sql_to_server(self.conn, query)
 
         if cursor:  # Ensures that the database query actually returns a valid cursor
             products = cursor.fetchall()
