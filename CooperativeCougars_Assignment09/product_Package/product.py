@@ -42,11 +42,13 @@ class Product:
             Get manufacturer name using ManufacturerID
             @return: Manufacturer name
             '''
+            db_manager = dbconnector()
             cursor = self.conn.cursor()
-            query = "SELECT Brand FROM tBrand WHERE BrandID = ?"
-            cursor.execute(query, (manufacturer_id,))
-            result = cursor.fetchone()
-            return result[0] if result else None
+            cursor.execute( "SELECT Manufacturer FROM tManufacturer WHERE ManufacturerID = ?", (manufacturer_id,))
+            if cursor:
+                result = cursor.fetchone()
+                return result[0] if result else None
+            return None
 
     def fetch_brand(self, brand_id):
             '''
@@ -54,12 +56,13 @@ class Product:
             @return: Brand name
             '''
             db_manager = dbconnector()
-            cursor = db_manager.submit_sql_to_server(self.conn, "SELECT Brand FROM tBrand WHERE BrandID = ?", (brand_id,))
+            cursor = self.conn.cursor()
+            cursor.execute( "SELECT Brand FROM tBrand WHERE BrandID = ?", (brand_id,))
             if cursor:
                 result = cursor.fetchone()
                 return result[0] if result else None
             return None
 
-        
+
 
 
