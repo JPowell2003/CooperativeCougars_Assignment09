@@ -43,7 +43,8 @@ class Product:
             @return: Manufacturer name
             '''
             db_manager = dbconnector()
-            cursor = db_manager.submit_sql_to_server(self.conn, "SELECT Manufacturer FROM tManufacturer WHERE ManufacturerID = ?", (manufacturer_id,))
+            cursor = self.conn.cursor()
+            cursor.execute( "SELECT Manufacturer FROM tManufacturer WHERE ManufacturerID = ?", (manufacturer_id,))
             if cursor:
                 result = cursor.fetchone()
                 return result[0] if result else None
@@ -55,12 +56,13 @@ class Product:
             @return: Brand name
             '''
             db_manager = dbconnector()
-            cursor = db_manager.submit_sql_to_server(self.conn, "SELECT Brand FROM tBrand WHERE BrandID = ?", (brand_id,))
+            cursor = self.conn.cursor()
+            cursor.execute( "SELECT Brand FROM tBrand WHERE BrandID = ?", (brand_id,))
             if cursor:
                 result = cursor.fetchone()
                 return result[0] if result else None
             return None
 
-        
+
 
 
