@@ -7,7 +7,7 @@
 # Semester/Year:   Spring 2025
 # Brief Description of the assignment:  Work in a team to devlop a python project that extracts data from the Grocery Store Simulatro database using SQL. 
 
-# Brief Description of what this module does. 
+# Brief Description of what this module does. This model gives us code to get both the manufacturer and brand name. It also grabs product data at random.
 # Citations: 
 # https://stackoverflow.com/questions/53892462/how-to-get-rid-of-spaces-between-variables-and-strings-when-printed
 # https://www.geeksforgeeks.org/querying-data-from-a-database-using-fetchone-and-fetchall/
