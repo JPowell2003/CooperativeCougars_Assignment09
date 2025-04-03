@@ -1,7 +1,18 @@
-# Product.py
-# Sources:
+# File Name : product.py
+# Student Name: Shantele King, Jay Powell, and Michael Slivinski
+# email: king4sl@mail.uc.edu, powela9@mail.uc.edu, and slivinmb@mail.uc.edu
+# Assignment Number: Assignment 09  
+# Due Date:   4/3/2025
+# Course #/Section:   IS4010-001
+# Semester/Year:   Spring 2025
+# Brief Description of the assignment:  Work in a team to devlop a python project that extracts data from the Grocery Store Simulatro database using SQL. 
+
+# Brief Description of what this module does. 
+# Citations: 
+# https://stackoverflow.com/questions/53892462/how-to-get-rid-of-spaces-between-variables-and-strings-when-printed
 # https://www.geeksforgeeks.org/querying-data-from-a-database-using-fetchone-and-fetchall/
 # https://dnmtechs.com/output-pyodbc-cursor-results-as-python-dictionary/
+# Anything else that's relevant:
 
 import random
 from dbconnector_Package.dbconnector import *
